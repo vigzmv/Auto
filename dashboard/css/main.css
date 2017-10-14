@@ -1,0 +1,198 @@
+html,
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.jumbotron {
+	margin-bottom: 0;
+}
+
+/* Desert scheme ported from vim to google prettify */
+pre.prettyprint { display: block; background-color: #333 }
+pre .nocode { background-color: none; color: #000 }
+pre .str { color: #ffa0a0 } /* string  - pink */
+pre .kwd { color: #f0e68c; font-weight: bold }
+pre .com { color: #87ceeb } /* comment - skyblue */
+pre .typ { color: #98fb98 } /* type    - lightgreen */
+pre .lit { color: #cd5c5c } /* literal - darkred */
+pre .pun { color: #fff }    /* punctuation */
+pre .pln { color: #fff }    /* plaintext */
+pre .tag { color: #f0e68c; font-weight: bold } /* html/xml tag    - lightyellow */
+pre .atn { color: #bdb76b; font-weight: bold } /* attribute name  - khaki */
+pre .atv { color: #ffa0a0 } /* attribute value - pink */
+pre .dec { color: #98fb98 } /* decimal         - lightgreen */
+
+ Specify class=linenums on a pre to get line numbering 
+ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE } /* IE indents via margin-left */
+li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
+/* Alternate shading for lines */
+li.L1,li.L3,li.L5,li.L7,li.L9 { }
+
+@media print {
+  pre.prettyprint { background-color: none }
+  pre .str, code .str { color: #060 }
+  pre .kwd, code .kwd { color: #006; font-weight: bold }
+  pre .com, code .com { color: #600; font-style: italic }
+  pre .typ, code .typ { color: #404; font-weight: bold }
+  pre .lit, code .lit { color: #044 }
+  pre .pun, code .pun { color: #440 }
+  pre .pln, code .pln { color: #000 }
+  pre .tag, code .tag { color: #006; font-weight: bold }
+  pre .atn, code .atn { color: #404 }
+  pre .atv, code .atv { color: #060 }
+}
+
+pre.prettyprint {
+    padding: 10px !important;
+    border: 1px solid #444 !important;
+    margin-bottom: 20px;
+}
+
+.main-header {
+	background-color: #ffd78a;
+}
+
+.main-header h2 {
+	font-weight: 300;
+	font-size: 1.35em;
+	line-height: 1.5em;
+	margin: 20px 0;
+	color: #1a1a1a;
+}
+
+.logo {
+	width: 220px;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+.github-ribbon {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    border: 0;
+}
+
+.code-box {
+	background-color: #1a1a1a;
+	border-bottom: 1px solid #444;
+}
+
+.code-box code {
+	background-color: #ffd78a;
+}
+
+.code-box h3 {
+	color: #fff;
+	font-weight: 300;
+	font-size: 1.3em;
+	margin: 0 0 30px;
+	line-height: 1.6em;
+}
+
+.glyphicon-arrow-right {
+	color: #fff;
+    display: inline-block;
+    position: absolute;
+    top: 42%;
+    font-size: 2em;
+    left: 5px;
+}
+
+.log-levels {
+	margin-bottom: 20px;
+}
+
+.log-levels .glyphicon {
+	margin-left: 30px;
+}
+
+.glyphicon.info {
+	color: #5cb85c;
+}
+
+.glyphicon.debug {
+	color: #5bc0de;
+}
+
+.glyphicon.warn {
+	color: #f0ad4e;
+}
+
+.glyphicon.err {
+	color: #d9534f;
+}
+
+.btn-doc {
+	font-size: 1.5em;
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: rgba(255,255,255,0.1);
+	border-radius: 4px;
+	color: #fff;
+	transition: .2s ease-in-out all;
+}
+
+.btn-doc-dark {
+	background-color: rgba(138,105,66, .75);
+	text-shadow: 1px 1px 1px rgba(0,0,0,.12);
+}
+
+.btn-doc span {
+	margin-right: 10px;
+}
+
+.btn-doc:hover {
+	color: #fff;
+	background-color: rgba(255,255,255,0.2);
+	text-decoration: none;
+}
+
+.btn-doc-dark:hover {
+	color: #fff;
+	background-color: rgba(138,105,66, .45);
+	text-decoration: none;
+}
+
+.attribution {
+	background-color: #000;
+	color: #fff;
+	padding: 20px;
+}
+
+@media screen and (max-width: 767px) {
+	.glyphicon-arrow-right {
+		display: none;
+	}	
+
+	.log-levels .glyphicon {
+		margin-left: 2px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
