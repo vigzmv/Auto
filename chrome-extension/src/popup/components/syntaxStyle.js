@@ -2,6 +2,7 @@
 export default {
   hljs: {
     fontSize: '13px',
+    overflow: 'auto',
     margin: 0
   },
   'hljs-keyword': {
