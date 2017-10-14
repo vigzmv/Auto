@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Auto</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1" name=viewport>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="main-header jumbotron">
+        <div class="container">
+        	<div class="text-center">
+        		<div class="row">
+        			<div class="col-sm-6 col-sm-offset-3">
+                        <h1>Auto</h1> 
+                        <h2>Browser automation as a service.</h2>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+    </div>
+
+    <div class="code-box jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3>Fetched script.</h3>
+                    <pre class="prettyprint" id="script"> 
+                    </pre>
+                </div>
+                <div class="col-sm-6">
+                    <h3>Config your process here.</h3>
+                    <span class="glyphicon glyphicon-arrow-right"></span>
+                    <pre class="prettyprint">
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="attribution text-center">
+        Contribute on <a href="https://github.com/deepakpathania/auto">github.</a> ❤ 
+    </div>
+
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script>
+        const arr = [];
+        const handler = (data) => {
+            const keys = Object.keys(data); 
+            const a = [];
+            keys.forEach(key => a.push(data[key].code))
+            const script = a[a.length-1];
+            const b = document.getElementById('script');
+            b.append(script);
+        }
+        const endpoint = 'https://uhack-6f65a.firebaseio.com/auto_codes.json';
+        fetch(endpoint)
+        .then(blob => blob.json())
+        .then(data => handler(data))
+    </script>
+</body>
+
+</html>
