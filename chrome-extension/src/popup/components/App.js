@@ -46,7 +46,12 @@ ${props.recording.reduce((records, record, i) => {
 });`}
     </SyntaxHighlighter>
     <div className={styles.button_wrapper}>
-      <button className={styles.button} onClick={props.handleRestart}>
+      <button
+        className={styles.button}
+        onClick={() => {
+          fetch('http://localhost:4000/exec/last').then(res => {});
+        }}
+      >
         <MdPlayCircleOutline />
       </button>
 

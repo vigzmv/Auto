@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "axios": "^0.16.2",
+    "exec": "^0.2.1",
+    "express": "^4.16.2",
+    "nightmare": "^2.10.0"
+  }
+}
