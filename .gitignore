@@ -1,0 +1,12 @@
+.idea/
+.vscode
+node_modules/
+Ops Extension/Extension.zip
+Ops Extension/yarn.*
+.DS_Store
+build
+inventory.js
+inventory
+config.js
+test.html
+
