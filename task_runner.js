@@ -9,9 +9,11 @@ app.get('/exec/last', (req, res) => {
     // console.log(_res.data);
 
     const a = Object.keys(_res.data);
-    const O = a[a.length - 1];
 
-    const x = O;
+    const key = a[a.length - 1];
+
+    const x = _res.data[key].code;
+
     exec(['node', '-e', x], (err, out, code) => {
       if (err instanceof Error) throw err;
       process.stderr.write(err);

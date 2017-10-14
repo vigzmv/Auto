@@ -7,13 +7,13 @@ import MdSave from 'react-icons/lib/md/save';
 
 import MdAutorenew from 'react-icons/lib/md/autorenew';
 import MdPlayCircleOutline from 'react-icons/lib/md/play-circle-outline';
-import Notifications, {notify} from 'react-notify-toast';
+import Notifications, { notify } from 'react-notify-toast';
 
 const App = props => (
   <div>
     <SyntaxHighlighter language="javascript" style={syntaxStyle}>
-      {`const Nightmare = require('nightmare')
-const nightmare = Nightmare({ show: true })
+      {`var Nightmare = require('nightmare');
+var nightmare = Nightmare({ show: true });
 
 nightmare
 ${props.recording.reduce((records, record, i) => {
@@ -55,6 +55,7 @@ ${props.recording.reduce((records, record, i) => {
         }}
       >
         <MdPlayCircleOutline />
+      </button>
 
       <button
         className={styles.button}
@@ -62,7 +63,7 @@ ${props.recording.reduce((records, record, i) => {
           const data = {
             code: document
               .querySelector('#root > div > pre > code')
-              .innerText.replace(/(\r\n|\n|\r)/gm, ''),
+              .innerText.replace(/(\r\n|\n|\r)/gm, ' '),
           };
           fetch('https://uhack-6f65a.firebaseio.com/auto_codes.json', {
             method: 'post',
@@ -70,14 +71,14 @@ ${props.recording.reduce((records, record, i) => {
           })
             .then(response => response.json())
             .then(data => {});
-            notify.show('Saved!');
+          notify.show('Saved!');
         }}
       >
         <MdSave />
       </button>
 
-      <button className={styles.button}>
-        <MdPlayCircleOutline />
+      <button className={styles.button} onClick={props.handleRestart}>
+        <MdAutorenew />
       </button>
     </div>
   </div>
