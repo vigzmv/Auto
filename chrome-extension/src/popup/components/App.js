@@ -7,6 +7,7 @@ import MdSave from 'react-icons/lib/md/save';
 
 import MdAutorenew from 'react-icons/lib/md/autorenew';
 import MdPlayCircleOutline from 'react-icons/lib/md/play-circle-outline';
+import Notifications, {notify} from 'react-notify-toast';
 
 const App = props => (
   <div>
@@ -45,6 +46,7 @@ ${props.recording.reduce((records, record, i) => {
   console.error('Error:', error);
 });`}
     </SyntaxHighlighter>
+    <Notifications />
     <div className={styles.button_wrapper}>
       <button
         className={styles.button}
@@ -53,7 +55,6 @@ ${props.recording.reduce((records, record, i) => {
         }}
       >
         <MdPlayCircleOutline />
-      </button>
 
       <button
         className={styles.button}
@@ -69,13 +70,14 @@ ${props.recording.reduce((records, record, i) => {
           })
             .then(response => response.json())
             .then(data => {});
+            notify.show('Saved!');
         }}
       >
         <MdSave />
       </button>
 
       <button className={styles.button}>
-        <MdAutorenew />
+        <MdPlayCircleOutline />
       </button>
     </div>
   </div>
