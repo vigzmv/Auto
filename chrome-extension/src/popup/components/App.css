@@ -1,14 +1,17 @@
 pre {
   font-size: 13px;
   overflow: auto;
+  display: none;
+}
+
+.button_wrapper {
+  text-align: center;
 }
 
 .button {
-  position: relative;
-  left: 120px;
   cursor: pointer;
   border-radius: 5px;
-  border-color: #49B882;
+  border-color: #49b882;
   border-style: none;
   padding: 3px 15px 5px;
   text-transform: lowercase;
@@ -16,13 +19,13 @@ pre {
   line-height: 1;
   display: inline-block;
   text-decoration: none;
-  background-color: #49B882;
+  background-color: #49b882;
   color: #fff;
   margin: 10px;
 }
 
 .button:hover {
-  background-color: #49B882;
+  background-color: #49b882;
 }
 
 .button:focus {
