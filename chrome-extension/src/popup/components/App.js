@@ -49,7 +49,7 @@ ${props.recording.reduce((records, record, i) => {
     <Notifications />
     <div className={styles.button_wrapper}>
       <button className={styles.button} onClick={props.handleRestart}>
-        <MdPlayCircleOutline />
+        <MdAutorenew />
       </button>
 
       <button
@@ -73,7 +73,7 @@ ${props.recording.reduce((records, record, i) => {
       </button>
 
       <button className={styles.button}>
-        <MdAutorenew />
+        <MdPlayCircleOutline />
       </button>
     </div>
   </div>
