@@ -28,20 +28,7 @@
         <div class="container">
             <div class="row">
                 <h3>Fetched script.</h3>
-                <div class="col-sm-6" id="scripts">
-                </div>
-                <div class="col-sm-6">
-                    <h3>Config your process here.</h3>
-                    <span class="glyphicon glyphicon-arrow-right"></span>
-                    <pre class="" style="padding:10px; background: wheat; height:200px; overflow:hidden">
-                        <form style="
-                        top: -40px;
-                        position: relative;
-                    ">
-                            <p>Time Period</p> <input type="number"/>
-                            <!-- <p>Destination</p> <input type="text"/> -->
-                        </form>
-                    </pre>
+                <div class="row" id="scripts">
                 </div>
             </div>
         </div>
@@ -62,8 +49,8 @@
             keys.forEach(key => a.push(data[key]))
 
 
-            dom = a.map((item, i) => `<h3> ${item.name} </h3>
-            <p class="prettyprint" style="color:wheat;padding: 34px;background: rgba(42, 40, 40, 0.74);font-size:18px;line-height: 1.5;word-wrap: break-word;" id="script"> ${item.code} </p>`)
+            dom = a.map((item, i) => `<div class="col-sm-6"><h3> ${item.name} </h3>
+            <p class="prettyprint" style="color:wheat;padding: 34px;background: rgba(42, 40, 40, 0.74);font-size:18px;line-height: 1.5;word-wrap: break-word;" id="script"> ${item.code} </p></div>`)
             // const script = a[a.length - 1];
             const b = document.getElementById('scripts');
             console.log(dom);
