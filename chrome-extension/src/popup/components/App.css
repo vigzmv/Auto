@@ -1,7 +1,6 @@
 pre {
   font-size: 13px;
   overflow: auto;
-  display: none;
 }
 
 .button_wrapper {
@@ -15,7 +14,7 @@ pre {
   border-style: none;
   padding: 3px 15px 5px;
   text-transform: lowercase;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1;
   display: inline-block;
   text-decoration: none;

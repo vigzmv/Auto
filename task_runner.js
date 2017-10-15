@@ -21,6 +21,17 @@ app.get('/exec/last', (req, res) => {
       // process.exit(code);1111
       res.send('executed');
     });
+
+    //script on the hour, and at 15, 30 and 45 minutes past the hour
+    // let repeatTime = "*/15 * * * *";
+
+    // exec(['pm2', 'start', 'task_runner.js' , '--cron', repeatTime], (err, out, code) => {
+    //   if (err instanceof Error) throw err;
+    //   process.stderr.write(err);
+    //   process.stdout.write(out);
+    //   res.send('Cron job set up.');
+    // });
+
   });
 });
 
