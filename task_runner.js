@@ -18,11 +18,33 @@ app.get('/exec/last', (req, res) => {
       if (err instanceof Error) throw err;
       process.stderr.write(err);
       process.stdout.write(out);
-      // process.exit(code);1111
+      // process.exit(code);
       res.send('executed');
     });
   });
 });
+
+
+app.get('/exec/:key', (req, res) => {
+  axios.get('https://uhack-6f65a.firebaseio.com/auto_codes.json').then((_res) => {
+    // console.log(_res.data);
+
+    // const a = Object.keys(_res.data);
+
+    const key = req.params.key;
+
+    const x = _res.data[key].code;
+
+    exec(['node', '-e', x], (err, out, code) => {
+      if (err instanceof Error) throw err;
+      process.stderr.write(err);
+      process.stdout.write(out);
+      // process.exit(code);
+      res.send('executed');
+    });
+  });
+});
+
 
 const port = 4000;
 app.listen(port);

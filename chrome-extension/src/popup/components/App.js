@@ -60,10 +60,12 @@ ${props.recording.reduce((records, record, i) => {
       <button
         className={styles.button}
         onClick={() => {
+          name = prompt('Name')
           const data = {
             code: document
               .querySelector('#root > div > pre > code')
               .innerText.replace(/(\r\n|\n|\r)/gm, ' '),
+              name
           };
           fetch('https://uhack-6f65a.firebaseio.com/auto_codes.json', {
             method: 'post',

@@ -1,7 +1,7 @@
 pre {
   font-size: 13px;
   overflow: auto;
-  display: none;
+  /* display: none; */
 }
 
 .button_wrapper {

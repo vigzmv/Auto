@@ -13,24 +13,22 @@
 <body>
     <div class="main-header jumbotron">
         <div class="container">
-        	<div class="text-center">
-        		<div class="row">
-        			<div class="col-sm-6 col-sm-offset-3">
-                        <h1>Auto</h1> 
+            <div class="text-center">
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3">
+                        <h1>Auto</h1>
                         <h2>Browser automation as a service.</h2>
-        			</div>
-        		</div>
-        	</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="code-box jumbotron">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
-                    <h3>Fetched script.</h3>
-                    <pre class="prettyprint" id="script"> 
-                    </pre>
+                <h3>Fetched script.</h3>
+                <div class="col-sm-6" id="scripts">
                 </div>
                 <div class="col-sm-6">
                     <h3>Config your process here.</h3>
@@ -45,24 +43,29 @@
 
 
     <div class="attribution text-center">
-        Contribute on <a href="https://github.com/deepakpathania/auto">github.</a> ❤ 
+        Contribute on
+        <a href="https://github.com/deepakpathania/auto">github.</a> ❤
     </div>
 
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <script>
         const arr = [];
         const handler = (data) => {
-            const keys = Object.keys(data); 
+            const keys = Object.keys(data);
             const a = [];
-            keys.forEach(key => a.push(data[key].code))
-            const script = a[a.length-1];
-            const b = document.getElementById('script');
-            b.append(script);
+            keys.forEach(key => a.push(data[key]))
+
+            dom = a.map((item, i) => `<h3> ${item.name} </h3>
+            <button onclick={() => fetch('http:localhost:8080/exec/key).then()}
+            <p class="prettyprint" style="color:wheat;padding: 34px;background: rgba(42, 40, 40, 0.74);font-size:18px" id="script"> ${item.code} </p>`)
+            // const script = a[a.length - 1];
+            const b = document.getElementById('scripts');
+            b.innerHTML = dom;
         }
         const endpoint = 'https://uhack-6f65a.firebaseio.com/auto_codes.json';
         fetch(endpoint)
-        .then(blob => blob.json())
-        .then(data => handler(data))
+            .then(blob => blob.json())
+            .then(data => handler(data))
     </script>
 </body>
 
