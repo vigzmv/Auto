@@ -56,10 +56,10 @@
             keys.forEach(key => a.push(data[key]))
 
             dom = a.map((item, i) => `<h3> ${item.name} </h3>
-            <button onclick={() => fetch('http:localhost:8080/exec/key).then()}
-            <p class="prettyprint" style="color:wheat;padding: 34px;background: rgba(42, 40, 40, 0.74);font-size:18px" id="script"> ${item.code} </p>`)
+            <p class="prettyprint" style="color:wheat;padding: 34px;background: rgba(42, 40, 40, 0.74);font-size:18px;line-height: 1.5;word-wrap: break-word;" id="script"> ${item.code} </p>`)
             // const script = a[a.length - 1];
             const b = document.getElementById('scripts');
+            console.log(dom);
             b.innerHTML = dom;
         }
         const endpoint = 'https://uhack-6f65a.firebaseio.com/auto_codes.json';
