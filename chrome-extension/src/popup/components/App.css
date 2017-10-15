@@ -1,6 +1,7 @@
 pre {
   font-size: 13px;
   overflow: auto;
+  padding: 8px;
 }
 
 .button_wrapper {

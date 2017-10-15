@@ -33,13 +33,19 @@
                 <div class="col-sm-6">
                     <h3>Config your process here.</h3>
                     <span class="glyphicon glyphicon-arrow-right"></span>
-                    <pre class="prettyprint">
+                    <pre class="" style="padding:10px; background: wheat; height:200px; overflow:hidden">
+                        <form style="
+                        top: -40px;
+                        position: relative;
+                    ">
+                            <p>Time Period</p> <input type="number"/>
+                            <!-- <p>Destination</p> <input type="text"/> -->
+                        </form>
                     </pre>
                 </div>
             </div>
         </div>
     </div>
-
 
 
     <div class="attribution text-center">
@@ -55,8 +61,8 @@
             const a = [];
             keys.forEach(key => a.push(data[key]))
 
+
             dom = a.map((item, i) => `<h3> ${item.name} </h3>
-            <button onclick={() => fetch('http:localhost:8080/exec/key).then()}
             <p class="prettyprint" style="color:wheat;padding: 34px;background: rgba(42, 40, 40, 0.74);font-size:18px" id="script"> ${item.code} </p>`)
             // const script = a[a.length - 1];
             const b = document.getElementById('scripts');
